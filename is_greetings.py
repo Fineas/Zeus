@@ -1,16 +1,11 @@
 import numpy as np
 import random
 
-#
-#DB
-#
-greetings = ["hi", "hello", "hey", "yo", "greetings"]
-greetings_responses = ["Hi there.", "Greetings Human.", "Hello there", "Hey"]
 
 #
 #GREETINGS
 #
-def generateGreetingsReply(message):
+def generateGreetingsReply(message, greetings, greetings_responses):
 		
 	tokens = message.split(" ")
 		

@@ -1,7 +1,11 @@
+import numpy as np
+
+
 #
 #BREAK MESSAGE INTO WORDS
 #
-words = []
+def s_break(message, holder):
+	holder = message.split(" ")
+	print(holder)
 
-def s_break(message):
-	words = message.split(" ")
+	return holder
