@@ -19,7 +19,6 @@ def inspect_question(message, words, question_identifier, present_marks):
 	for_counter = 0
 	true_counter = 0;
 	for i in xrange(0, len(words)):
-		print("$$$$$$$$$$$$$$$$$$")
 		if_counter = 0
 		for j in xrange(0, len(question_identifier)):
 			if words[for_counter] == question_identifier[if_counter]:
@@ -27,6 +26,4 @@ def inspect_question(message, words, question_identifier, present_marks):
 				true_counter+=1
 			if_counter += 1
 		for_counter+=1
-
-	print("..............................................................")
 	print(present_marks)
