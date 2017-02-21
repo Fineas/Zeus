@@ -26,4 +26,3 @@ def inspect_question(message, words, question_identifier, present_marks):
 				true_counter+=1
 			if_counter += 1
 		for_counter+=1
-	print(present_marks)
