@@ -3,9 +3,10 @@ import random
 import sys
 
 from break_message import s_break
-from is_question import detectQuestion, inspect_question
+from is_question import detectQuestion, inspect_question, question_answer
 from is_greetings import generateGreetingsReply
 from is_order import detectOrder
+from pymongo import MongoClient
 
 
 #
@@ -18,6 +19,8 @@ if_counter = 0
 question_identifier = ["how", "where", "when", "who", "what", "?"]
 greetings = ["hi", "hello", "hey", "yo", "greetings"]
 greetings_responses = ["Hi there.", "Greetings Human.", "Hello there", "Hey"]
+client = MongoClient('localhost', 27017)
+db = client.dictionary_databse
 
 
 #
@@ -28,6 +31,8 @@ def get_type(message):
 	#BREAK MESSAGE IN WORDS
 	#
 	words = message.split(" ")
+	for i in xrange(0, len(words)):
+		words[i] = words[i].lower()
 	#
 	#GREETINGS
 	#
@@ -36,7 +41,8 @@ def get_type(message):
 	#QUESTION
 	#
 	if detectQuestion(message, question_identifier, present_marks) == True:
-		inspect_question(message, words, question_identifier, present_marks)
+		inspect_question(words, question_identifier, present_marks)
+		question_answer(words)
 	#
 	#ORDER
 	#
