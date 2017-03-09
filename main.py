@@ -16,7 +16,7 @@ while True:
 	message = raw_input("Say something to Zeus: ")
 
 	repeted_input(message, message_history)
-	
+
 	if msg_insrt == 2:
 		if message_history[0] == message_history[1] and message_history[0] == message_history[2] and message_history[1] == message_history[2]:
 			print("Is '%s' all you know?" % (message_history[0]))
