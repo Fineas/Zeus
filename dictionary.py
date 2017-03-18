@@ -18,10 +18,14 @@ message = raw_input()
 
 print(db.posts)
 
+d = con[db][col].find_one()
+
+print(d)
+
 db.dictionary_database.posts.remove({ "_id" : ObjectId("58c045c2a7643f7fd10e9e01")})
 db.dictionary_database.posts.remove({ "_id" : ObjectId("58c0454ca7643f7fb0d8cabb")})
 db.dictionary_database.posts.remove({ "_id" : ObjectId("58c0453aa7643f7fa63abd98")})
-db.dictionary_database.posts.remove({ "_id" : ObjectId("58c04528a7643f7f9dcbd390")})
+
 
 print(message)
 #posts   = db.posts
