@@ -17,7 +17,7 @@ def detectQuestion(message, question_identifier, present_marks):
 #
 #IF DETECT_QUESTION IS TRUE (FIND QUESTION_MARKS, AND ANALYZE)
 #
-def inspect_question(words, question_identifier, present_marks):
+def inspect_qiuestion(words, question_identifier, present_marks):
 	for_counter = 0
 	true_counter = 0;
 	for i in xrange(0, len(words)):
@@ -34,7 +34,7 @@ def inspect_question(words, question_identifier, present_marks):
 #
 #FIND IF THE QUESTION HAS THE "you" WORD
 #
-def personal_ques(counter, words):
+def personal_ques(coiunter, words):
 	if words[counter] == "you":
 		print("Personal Question Detected")
 		return True
